@@ -21,3 +21,14 @@ main:
 process_loop:
     bge $t0, 10, end_loop  #Exit loop if i >= 10
 
+    #Load current character
+    lb, $t2, input_buffer($t0)
+
+    #Check if character is a digit (0-9)
+
+    li $t3, 48   #'0' ASCII
+    li $t4, 57   #'9' ASCII
+    blt $t2, $t3, checker_lower
+    bgt $t2, $t4, checker_lower
+    
+
