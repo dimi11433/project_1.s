@@ -30,5 +30,11 @@ process_loop:
     li $t4, 57   #'9' ASCII
     blt $t2, $t3, checker_lower
     bgt $t2, $t4, checker_lower
-    
+    sub $t5, $t2, $t3 #Converting the value to (0-9)
+    j add_sum
+
+check_lower:
+    #check lowercase a-z(ASCII 97-122)
+    li $t3, 65
+    li $t4, 84
 
