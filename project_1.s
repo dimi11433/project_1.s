@@ -12,3 +12,12 @@ main:
     li $a1, 11 #read up to 10 characters
     syscall
 
+    #Initialize G and H sums
+    li $s0, 0 #G = 0(first half sum)
+    li $s1, 0 #H = 0(second half sum)
+
+    li $t0, 0 #Loop counter(i = 0 to 9)
+
+process_loop:
+    bge $t0, 10, end_loop  #Exit loop if i >= 10
+
