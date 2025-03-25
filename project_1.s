@@ -37,4 +37,9 @@ check_lower:
     #check lowercase a-z(ASCII 97-122)
     li $t3, 65
     li $t4, 84
+    blt $t2, $t3, check_upper
+    bgt $t2, $t4, check_upper
+    sub $t5, $t2, $t3   # c - 'a'
+    addi $t5, $t5, 10 #value = 10 + (c-'a')
+    j add_sum 
 
