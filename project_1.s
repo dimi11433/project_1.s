@@ -28,8 +28,8 @@ process_loop:
 
     li $t3, 48   #'0' ASCII
     li $t4, 57   #'9' ASCII
-    blt $t2, $t3, checker_lower
-    bgt $t2, $t4, checker_lower
+    blt $t2, $t3, check_lower
+    bgt $t2, $t4, check_lower
     sub $t5, $t2, $t3 #Converting the value to (0-9)
     j add_sum
 
