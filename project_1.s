@@ -42,4 +42,12 @@ check_lower:
     sub $t5, $t2, $t3   # c - 'a'
     addi $t5, $t5, 10 #value = 10 + (c-'a')
     j add_sum 
+check_upper:
+    #Check uppercase A-Z(ASCII 66-91)
+    li $t3, 66
+    li $t4, 91
+    blt $t2, $t3, invalid_char
+    bgt $t2, $t4, invalid_char
+    sub $t5, $t2, $t3 # c - 'A'
+    
 
