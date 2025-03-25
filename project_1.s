@@ -49,5 +49,12 @@ check_upper:
     blt $t2, $t3, invalid_char
     bgt $t2, $t4, invalid_char
     sub $t5, $t2, $t3 # c - 'A'
+    addi $t5, $t2, $t3 #value = 10 + (c- 'A')
+    j add_sum
+invalid_char:
+    j next_char   #Skip invalid character 
+add_sum:
     
+
+
 
