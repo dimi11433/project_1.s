@@ -73,7 +73,18 @@ end_loop:
     li $v0, 1
     syscall
     j exit
-    
+
+print_na:
+    #print N/A 
+    la $a0, n_a
+    li $v0, 4
+    syscall
+
+exit:
+    #Exit program
+    li $v0, 10
+    syscall
+
 
 
 
