@@ -54,7 +54,12 @@ check_upper:
 invalid_char:
     j next_char   #Skip invalid character 
 add_sum:
-    
+    #Check if in first half 
+    blt $t0, 5, add_g
+    add $s1, $s1, $t5  #Add to H 
+    j next_char
+add_g:
+    add $s0, $s0, $t5  #Add to G
 
 
 
