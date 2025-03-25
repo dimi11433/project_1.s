@@ -60,6 +60,13 @@ add_sum:
     j next_char
 add_g:
     add $s0, $s0, $t5  #Add to G
+next_char:
+    addi $t0, $t0, 1  #i + 1
+    j process_loop
+end_loop:
+    #Check if total sum is zero
+    add $t6, $s0, $s1
+    beqz $t6, print_na
 
 
 
