@@ -68,5 +68,12 @@ end_loop:
     add $t6, $s0, $s1
     beqz $t6, print_na
 
+    #Calculate and print G - H 
+    sub $a0,$s0,$s1
+    li $v0, 1
+    syscall
+    j exit
+    
+
 
 
